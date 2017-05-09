@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<widget id="timer.widget.timer" needsEntityContext="true" xmlns="http://www.mendix.com/widget/1.0/">
+    <name>Timer</name>
+    <description>Clock and duration timer</description>
+
+    <icon />
+
+    <properties>
+        <property key="type" type="enumeration" required="true" defaultValue="clock">
+            <caption>Type</caption>
+            <category>Appearance</category>
+            <description/>
+            <enumerationValues>
+                <enumerationValue key="clock">Clock</enumerationValue>
+                <enumerationValue key="duration">Duration</enumerationValue>
+            </enumerationValues>
+        </property>
+        <property key="formatTime" type="translatableString" required="true">
+            <caption>Time format</caption>
+            <category>Appearance</category>
+            <description>Mendix data time formatting</description>
+        </property>
+        <property key="refreshInterval" type="integer" required="true" defaultValue="1">
+            <caption>Refresh interval</caption>
+            <category>Appearance</category>
+            <description/>
+        </property>
+        <property key="startTimeAttribute" type="attribute">
+            <caption>Dummy key</caption>
+            <category>Appearance</category>
+            <description/>
+            <attributeTypes>
+                <attributeType name="DateTime"/>
+            </attributeTypes>
+        </property>
+    </properties>
+</widget>
