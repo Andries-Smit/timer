@@ -1,20 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<widget id="timer.widget.timer" needsEntityContext="true" xmlns="http://www.mendix.com/widget/1.0/">
-    <name>Timer</name>
+<widget id="timer.widget.Duration" needsEntityContext="true" xmlns="http://www.mendix.com/widget/1.0/">
+    <name>Timer duration</name>
     <description>Clock and duration timer</description>
 
     <icon />
 
     <properties>
-        <property key="type" type="enumeration" required="true" defaultValue="clock">
-            <caption>Type</caption>
-            <category>Appearance</category>
-            <description/>
-            <enumerationValues>
-                <enumerationValue key="clock">Clock</enumerationValue>
-                <enumerationValue key="duration">Duration</enumerationValue>
-            </enumerationValues>
-        </property>
         <property key="formatTime" type="translatableString">
             <caption>Time format</caption>
             <category>Appearance</category>
@@ -25,7 +16,7 @@
             <category>Appearance</category>
             <description/>
         </property>
-        <property key="startTimeAttribute" type="attribute"  required="false">
+        <property key="startTimeAttribute" type="attribute">
             <caption>Start time attribute</caption>
             <category>Appearance</category>
             <description/>

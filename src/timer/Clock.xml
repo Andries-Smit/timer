@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<widget id="timer.widget.Clock" needsEntityContext="false" xmlns="http://www.mendix.com/widget/1.0/">
+    <name>Timer clock</name>
+    <description>Clock and duration timer</description>
+
+    <icon />
+
+    <properties>
+        <property key="formatTime" type="translatableString">
+            <caption>Time format</caption>
+            <category>Appearance</category>
+            <description>Mendix data time formatting</description>
+        </property>
+        <property key="refreshInterval" type="integer"  defaultValue="1">
+            <caption>Refresh interval</caption>
+            <category>Appearance</category>
+            <description/>
+        </property>
+    </properties>
+</widget>

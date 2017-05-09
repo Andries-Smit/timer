@@ -1,25 +1,13 @@
 define([
     "dojo/_base/declare",
     "mxui/widget/_WidgetBase",
-
-    "mxui/dom",
-    "dojo/dom",
-    "dojo/dom-prop",
-    "dojo/dom-geometry",
     "dojo/dom-class",
     "dojo/dom-style",
-    "dojo/dom-construct",
-    "dojo/_base/array",
-    "dojo/_base/lang",
-    "dojo/text",
-    "dojo/html",
-    "dojo/_base/event",
-
-
-], function (declare, _WidgetBase, dom, dojoDom, dojoProp, dojoGeometry, dojoClass, dojoStyle, dojoConstruct, dojoArray, lang, dojoText, dojoHtml, dojoEvent) {
+    "dojo/_base/lang"
+], function (declare, _WidgetBase, dojoClass, dojoStyle, lang) {
     "use strict";
 
-    return declare("timer.widget.timer", [ _WidgetBase ], {
+    return declare("timer.widget.Timer", [ _WidgetBase ], {
 
         // Modeler attribtues
         formatTime: "",
@@ -39,6 +27,7 @@ define([
 
         postCreate: function () {
             logger.debug(this.id + ".postCreate");
+            dojoClass.add(this.domNode, "widget-trimer-" + this.type);
             if (this.type === "clock") {
                 this.startClock();
             }
@@ -90,18 +79,19 @@ define([
 
         _updateRendering: function (callback) {
             logger.debug(this.id + "._updateRendering");
-
-            if (this._contextObj !== null) {
-                if(this.startTimeAttribute && this.type === "duration") {
-                    this._startTime = this._contextObj.get(this.startTimeAttribute);
-                    if(this._startTime) {                        
-                        this.startClock();
-                    } else {
-                        this.stopClock();
+            if(this.type === "duration") {
+                if (this._contextObj !== null) {
+                    if(this.startTimeAttribute && this.type === "duration") {
+                        this._startTime = this._contextObj.get(this.startTimeAttribute);
+                        if(this._startTime) {                        
+                            this.startClock();
+                        } else {
+                            this.stopClock();
+                        }
                     }
+                } else {
+                    this.stopClock();
                 }
-            } else {
-                this.stopClock();
             }
 
             this._executeCallback(callback, "_updateRendering");
@@ -137,5 +127,3 @@ define([
         }
     });
 });
-
-require(["timer/widget/timer"]);
