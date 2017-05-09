@@ -9,10 +9,14 @@
         <property key="formatTime" type="translatableString">
             <caption>Time format</caption>
             <category>Appearance</category>
-            <description>Mendix data time formatting</description>
+            <description>Mendix data time formatting
+NOTE: does not support days and duration can not be longer than 24h</description>
+            <translations>
+                <translation lang="en_US">HH:mm:ss:SSS</translation>
+            </translations>
         </property>
         <property key="refreshInterval" type="integer"  defaultValue="1">
-            <caption>Refresh interval</caption>
+            <caption>Refresh interval (ms)</caption>
             <category>Appearance</category>
             <description/>
         </property>

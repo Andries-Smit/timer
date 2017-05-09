@@ -1,7 +1,7 @@
 {
   "name": "timer",
   "widgetName": "Timer",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Clock and duration timer",
   "license": "Apache 2",
   "author": "Andries Smit",
