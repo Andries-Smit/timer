@@ -15,18 +15,18 @@
                 <enumerationValue key="duration">Duration</enumerationValue>
             </enumerationValues>
         </property>
-        <property key="formatTime" type="translatableString" required="true">
+        <property key="formatTime" type="translatableString">
             <caption>Time format</caption>
             <category>Appearance</category>
             <description>Mendix data time formatting</description>
         </property>
-        <property key="refreshInterval" type="integer" required="true" defaultValue="1">
+        <property key="refreshInterval" type="integer"  defaultValue="1">
             <caption>Refresh interval</caption>
             <category>Appearance</category>
             <description/>
         </property>
-        <property key="startTimeAttribute" type="attribute">
-            <caption>Dummy key</caption>
+        <property key="startTimeAttribute" type="attribute"  required="false">
+            <caption>Start time attribute</caption>
             <category>Appearance</category>
             <description/>
             <attributeTypes>
